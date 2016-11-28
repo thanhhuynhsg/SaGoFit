@@ -1,0 +1,37 @@
+ALTER PROC POST_ID_AUTO
+@IDPOST VARCHAR(10) OUTPUT
+AS
+BEGIN
+	DECLARE @MA INT, @NAM VARCHAR(2), @THANG VARCHAR(2)
+	SET @NAM = RIGHT(CONVERT(VARCHAR(4), YEAR(GETDATE())),2)
+	SET @THANG = RIGHT('0'+CONVERT(VARCHAR(2), MONTH(GETDATE())), 2)
+
+	IF NOT EXISTS (SELECT 1 FROM POST)
+		SET @IDPOST = 'PO' + @NAM + @THANG + '0001'
+	ELSE
+	BEGIN
+		SET @MA = CONVERT(INT, RIGHT((SELECT MAX(RIGHT(ID_POST,4)) FROM POST WHERE 
+														SUBSTRING(ID_POST, 3,4) = @NAM+@THANG),4)) + 1
+		SET @IDPOST = 'PO'+ @NAM + @THANG + RIGHT('000' + CONVERT(VARCHAR(4), @MA), 4)
+	END
+END
+
+
+GO
+alter PROC SP_POST_INSERT
+@PostName nvarchar(100), 
+@PostContent ntext, 
+@Image_link varchar(100), 
+@Image_list varchar(100), 
+@Author nvarchar(50)
+AS
+BEGIN
+	DECLARE @IDPOST VARCHAR(12)
+	
+	EXEC POST_ID_AUTO @IDPOST OUTPUT
+
+	INSERT INTO POST(ID_POST, PostName, PostContent, Created, Image_link, Image_list, Author)
+	VALUES (@IDPOST, @PostName, @PostContent, GETDATE(), @Image_link, @Image_list, @Author)
+END
+
+EXEC SP_POST_INSERT 'Test','Noi dung test','T', 'T', 'Thanh Huynh'
