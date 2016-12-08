@@ -11,7 +11,6 @@ F:\Git\Web\SaGoFit\SaGoFit\bin\roslyn\System.Reflection.Metadata.dll
 F:\Git\Web\SaGoFit\SaGoFit\bin\roslyn\vbc.exe
 F:\Git\Web\SaGoFit\SaGoFit\bin\roslyn\VBCSCompiler.exe
 F:\Git\Web\SaGoFit\SaGoFit\bin\roslyn\VBCSCompiler.exe.config
-F:\Git\Web\SaGoFit\SaGoFit\bin\SaGoFit.dll.config
 F:\Git\Web\SaGoFit\SaGoFit\bin\SaGoFit.dll
 F:\Git\Web\SaGoFit\SaGoFit\bin\SaGoFit.pdb
 F:\Git\Web\SaGoFit\SaGoFit\bin\Antlr3.Runtime.dll
@@ -80,3 +79,4 @@ F:\Git\Web\SaGoFit\SaGoFit\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 F:\Git\Web\SaGoFit\SaGoFit\obj\Debug\SaGoFit.csprojResolveAssemblyReference.cache
 F:\Git\Web\SaGoFit\SaGoFit\obj\Debug\SaGoFit.dll
 F:\Git\Web\SaGoFit\SaGoFit\obj\Debug\SaGoFit.pdb
+F:\Git\Web\SaGoFit\SaGoFit\bin\SaGoFit.dll.config
