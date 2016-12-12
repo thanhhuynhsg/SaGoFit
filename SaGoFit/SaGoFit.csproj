@@ -195,6 +195,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Adminstrator\AdminstratorAreaRegistration.cs" />
+    <Compile Include="Areas\Adminstrator\Controllers\HomeController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -208,6 +210,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Assets\css\bootstrap.css" />
+    <Content Include="Areas\Assets\css\custom.css" />
+    <Content Include="Areas\Assets\css\font-awesome.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\user\css\animate.css" />
@@ -238,6 +243,22 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\Error\404.png" />
+    <Content Include="Image\Error\background.png" />
+    <Content Include="Image\Error\background_dline.png" />
+    <Content Include="Image\Error\background_hash.png" />
+    <Content Include="Image\Error\background_line.png" />
+    <Content Include="Image\Error\background_rhash.png" />
+    <Content Include="Image\Error\background_square.png" />
+    <Content Include="Image\Error\background_vline.png" />
+    <Content Include="Image\Error\container_background.png" />
+    <Content Include="Image\Error\list_bullet.png" />
+    <Content Include="Image\Error\message_stick.png" />
+    <Content Include="Image\Error\robotik.png" />
+    <Content Include="Image\Error\search_button_background.png" />
+    <Content Include="Image\Error\search_button_background_.png" />
+    <Content Include="Image\Error\search_input_background.png" />
+    <Content Include="Image\Error\transparent.png" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -327,6 +348,9 @@
     <Content Include="Content\user\sass\_bootstrap-compass.scss" />
     <Content Include="Content\user\sass\_bootstrap-mincer.scss" />
     <Content Include="Content\user\sass\_bootstrap-sprockets.scss" />
+    <Content Include="Areas\Adminstrator\Views\web.config" />
+    <Content Include="Areas\Adminstrator\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Adminstrator\Views\Shared\Layout.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -373,7 +397,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Image\" />
+    <Folder Include="Areas\Adminstrator\Models\" />
+    <Folder Include="Areas\Assets\font-awesome\" />
+    <Folder Include="Areas\Assets\fonts\" />
+    <Folder Include="Areas\Assets\img\" />
+    <Folder Include="Areas\Assets\js\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
